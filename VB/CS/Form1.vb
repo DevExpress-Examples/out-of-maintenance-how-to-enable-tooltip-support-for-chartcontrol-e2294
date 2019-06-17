@@ -1,5 +1,4 @@
-Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Data
 Imports System.Windows.Forms
 Imports DevExpress.XtraCharts
@@ -10,13 +9,14 @@ Imports DXSample
 Namespace docShowSeriesPointTooltip
 	Partial Public Class Form1
 		Inherits Form
+
 		Public Sub New()
 			InitializeComponent()
 		End Sub
 
 		Private toolTipController1 As New ToolTipController()
 
-		Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles MyBase.Load
+		Private Sub Form1_Load(ByVal sender As Object, ByVal e As EventArgs) Handles Me.Load
 			' TODO: This line of code loads data into the 'nwindDataSet.Products' table. You can move, or remove it, as needed.
 			Me.productsTableAdapter.Fill(Me.nwindDataSet.Products)
 			toolTipController1.ReshowDelay = 300

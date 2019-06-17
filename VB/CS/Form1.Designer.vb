@@ -1,6 +1,4 @@
-Imports Microsoft.VisualBasic
-Imports System
-Namespace docShowSeriesPointTooltip
+﻿Namespace docShowSeriesPointTooltip
 	Partial Public Class Form1
 		''' <summary>
 		''' Required designer variable.
@@ -48,11 +46,7 @@ Namespace docShowSeriesPointTooltip
 			Me.chartControl1.DataAdapter = Me.productsTableAdapter
 			Me.chartControl1.DataSource = Me.productsBindingSource
 			xyDiagram1.AxisX.Label.Staggered = True
-			xyDiagram1.AxisX.Range.ScrollingRange.SideMarginsEnabled = True
-			xyDiagram1.AxisX.Range.SideMarginsEnabled = True
 			xyDiagram1.AxisX.VisibleInPanesSerializable = "-1"
-			xyDiagram1.AxisY.Range.ScrollingRange.SideMarginsEnabled = True
-			xyDiagram1.AxisY.Range.SideMarginsEnabled = True
 			xyDiagram1.AxisY.VisibleInPanesSerializable = "-1"
 			Me.chartControl1.Diagram = xyDiagram1
 			Me.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -60,13 +54,11 @@ Namespace docShowSeriesPointTooltip
 			Me.chartControl1.Name = "chartControl1"
 			series1.ArgumentDataMember = "ProductName"
 			series1.DataFilters.ClearAndAddRange(New DevExpress.XtraCharts.DataFilter() { New DevExpress.XtraCharts.DataFilter("CategoryID", "System.Int32", DevExpress.XtraCharts.DataFilterCondition.Equal, 5)})
-			sideBySideBarSeriesLabel1.LineVisible = True
 			series1.Label = sideBySideBarSeriesLabel1
 			series1.Name = "Series 2"
 			series1.ShowInLegend = False
 			series1.ValueDataMembersSerializable = "UnitPrice"
 			Me.chartControl1.SeriesSerializable = New DevExpress.XtraCharts.Series() { series1}
-			sideBySideBarSeriesLabel2.LineVisible = True
 			Me.chartControl1.SeriesTemplate.Label = sideBySideBarSeriesLabel2
 			Me.chartControl1.Size = New System.Drawing.Size(614, 358)
 			Me.chartControl1.TabIndex = 0
@@ -93,7 +85,8 @@ Namespace docShowSeriesPointTooltip
 			Me.Controls.Add(Me.chartControl1)
 			Me.Name = "Form1"
 			Me.Text = "Form1"
-'			Me.Load += New System.EventHandler(Me.Form1_Load);
+'INSTANT VB NOTE: The following InitializeComponent event wireup was converted to a 'Handles' clause:
+'ORIGINAL LINE: this.Load += new System.EventHandler(this.Form1_Load);
 			CType(xyDiagram1, System.ComponentModel.ISupportInitialize).EndInit()
 			CType(sideBySideBarSeriesLabel1, System.ComponentModel.ISupportInitialize).EndInit()
 			CType(series1, System.ComponentModel.ISupportInitialize).EndInit()
