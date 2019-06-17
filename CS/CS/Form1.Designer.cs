@@ -46,11 +46,7 @@ namespace docShowSeriesPointTooltip {
             this.chartControl1.DataAdapter = this.productsTableAdapter;
             this.chartControl1.DataSource = this.productsBindingSource;
             xyDiagram1.AxisX.Label.Staggered = true;
-            xyDiagram1.AxisX.Range.ScrollingRange.SideMarginsEnabled = true;
-            xyDiagram1.AxisX.Range.SideMarginsEnabled = true;
             xyDiagram1.AxisX.VisibleInPanesSerializable = "-1";
-            xyDiagram1.AxisY.Range.ScrollingRange.SideMarginsEnabled = true;
-            xyDiagram1.AxisY.Range.SideMarginsEnabled = true;
             xyDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.chartControl1.Diagram = xyDiagram1;
             this.chartControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -59,14 +55,12 @@ namespace docShowSeriesPointTooltip {
             series1.ArgumentDataMember = "ProductName";
             series1.DataFilters.ClearAndAddRange(new DevExpress.XtraCharts.DataFilter[] {
             new DevExpress.XtraCharts.DataFilter("CategoryID", "System.Int32", DevExpress.XtraCharts.DataFilterCondition.Equal, 5)});
-            sideBySideBarSeriesLabel1.LineVisible = true;
             series1.Label = sideBySideBarSeriesLabel1;
             series1.Name = "Series 2";
             series1.ShowInLegend = false;
             series1.ValueDataMembersSerializable = "UnitPrice";
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            sideBySideBarSeriesLabel2.LineVisible = true;
             this.chartControl1.SeriesTemplate.Label = sideBySideBarSeriesLabel2;
             this.chartControl1.Size = new System.Drawing.Size(614, 358);
             this.chartControl1.TabIndex = 0;
